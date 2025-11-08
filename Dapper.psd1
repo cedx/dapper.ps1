@@ -15,8 +15,6 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
-		"ConvertFrom-Reader"
-		"ConvertFrom-Record"
 		"Invoke-Command"
 		"Get-Version"
 		"New-Connection"
@@ -31,8 +29,6 @@
 	)
 
 	NestedModules = @(
-		"src/ConvertFrom-Reader.psm1"
-		"src/ConvertFrom-Record.psm1"
 		"src/Invoke-Command.psm1"
 		"src/New-Connection.psm1"
 		"src/Select-Command.psm1"
