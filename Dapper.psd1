@@ -18,11 +18,13 @@
 		"ConvertFrom-Reader"
 		"ConvertFrom-Record"
 		"Get-Version"
+		"New-Connection"
 	)
 
 	NestedModules = @(
 		"src/ConvertFrom-Reader.psm1"
 		"src/ConvertFrom-Record.psm1"
+		"src/New-Connection.psm1"
 	)
 
 	RequiredAssemblies = @(
@@ -34,7 +36,7 @@
 			LicenseUri = "https://github.com/cedx/dapper.ps1/blob/main/License.md"
 			ProjectUri = "https://github.com/cedx/dapper.ps1"
 			ReleaseNotes = "https://github.com/cedx/dapper.ps1/releases"
-			Tags = "ado.net", "dapper", "orm", "sql"
+			Tags = "ado.net", "dapper", "data", "orm", "sql"
 		}
 	}
 }

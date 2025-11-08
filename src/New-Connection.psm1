@@ -1,4 +1,5 @@
 using namespace System.Data
+using namespace System.Diagnostics.CodeAnalysis
 
 <#
 .SYNOPSIS
@@ -17,6 +18,7 @@ using namespace System.Data
 function New-Connection {
 	[CmdletBinding()]
 	[OutputType([IDbConnection])]
+	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[type] $Type,
