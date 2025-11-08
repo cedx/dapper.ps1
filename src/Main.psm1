@@ -3,12 +3,13 @@ using namespace System.Reflection
 
 <#
 .SYNOPSIS
-	Returns the version number of the Dapper assembly.
+	Returns the file version of the Dapper assembly.
 .OUTPUTS
-	The version number of the Dapper assembly.
+	The file version of the Dapper assembly.
 #>
 function Get-Version {
 	[OutputType([version])] param ()
 	$assembly = [Assembly]::GetAssembly([SqlMapper])
-	[CustomAttributeExtensions]::GetCustomAttribute[AssemblyFileVersionAttribute]($assembly).Version
+	$fileVersion = [CustomAttributeExtensions]::GetCustomAttribute[AssemblyFileVersionAttribute]($assembly)
+	[version] $fileVersion.Version
 }
