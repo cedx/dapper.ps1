@@ -13,12 +13,12 @@ function Set-TypeMap {
 	[OutputType([void])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[type] $Type,
+		[object] $Type,
 
 		[Parameter(Mandatory, Position = 1)]
 		[AllowNull()]
 		[ITypeMap] $Map
 	)
 
-	[SqlMapper]::SetTypeMap($Type, $Map)
+	[SqlMapper]::SetTypeMap($Type -is [type] ? $Type : [type]::GetType($Type), $Map)
 }

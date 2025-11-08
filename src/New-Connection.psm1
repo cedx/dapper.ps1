@@ -17,7 +17,7 @@ function New-Connection {
 	[OutputType([object])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[type] $Type,
+		[object] $Type,
 
 		[Parameter(Mandatory, Position = 1, ValueFromPipeline)]
 		[string] $ConnectionString,
@@ -27,7 +27,7 @@ function New-Connection {
 	)
 
 	process {
-		$connection = New-Object $Type.FullName $ConnectionString
+		$connection = New-Object ($Type -is [type] ? $Type.FullName : $Type) $ConnectionString
 		if ($Open) { $connection.Open() }
 		$connection
 	}
