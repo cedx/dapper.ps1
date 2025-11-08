@@ -19,12 +19,24 @@
 		"ConvertFrom-Record"
 		"Get-Version"
 		"New-Connection"
+		"Select-First"
+		"Select-FirstOrDefault"
+		"Select-Reader"
+		"Select-Scalar"
+		"Select-Single"
+		"Select-SingleOrDefault"
 	)
 
 	NestedModules = @(
 		"src/ConvertFrom-Reader.psm1"
 		"src/ConvertFrom-Record.psm1"
 		"src/New-Connection.psm1"
+		"src/Select-First.psm1"
+		"src/Select-FirstOrDefault.psm1"
+		"src/Select-Reader.psm1"
+		"src/Select-Scalar.psm1"
+		"src/Select-Single.psm1"
+		"src/Select-SingleOrDefault.psm1"
 	)
 
 	RequiredAssemblies = @(
