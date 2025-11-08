@@ -27,6 +27,7 @@
 		"Select-Scalar"
 		"Select-Single"
 		"Select-SingleOrDefault"
+		"Set-TypeMap"
 	)
 
 	NestedModules = @(
@@ -41,6 +42,7 @@
 		"src/Select-Scalar.psm1"
 		"src/Select-Single.psm1"
 		"src/Select-SingleOrDefault.psm1"
+		"src/Set-TypeMap.psm1"
 	)
 
 	RequiredAssemblies = @(
