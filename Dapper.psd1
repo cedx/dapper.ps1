@@ -7,7 +7,7 @@
 	Author = "Cédric Belin <cedx@outlook.com>"
 	CompanyName = "Cedric-Belin.fr"
 	Copyright = "© Cédric Belin"
-	Description = "A high performance micro-ORM supporting MariaDB, MySQL, SQL Server, SQLite and more."
+	Description = "A high performance micro-ORM supporting MariaDB, PostgreSQL, SQL Server, SQLite and more."
 	GUID = "73f259d4-477b-4162-8bc7-af02221cef9c"
 
 	AliasesToExport = @()
@@ -15,13 +15,13 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
-		"ConvertFrom-DataReader"
-		"ConvertFrom-DataRecord"
+		"ConvertFrom-Reader"
+		"ConvertFrom-Record"
 	)
 
 	NestedModules = @(
-		"src/ConvertFrom-DataReader.psm1"
-		"src/ConvertFrom-DataRecord.psm1"
+		"src/ConvertFrom-Reader.psm1"
+		"src/ConvertFrom-Record.psm1"
 	)
 
 	RequiredAssemblies = @(

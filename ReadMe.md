@@ -1,8 +1,8 @@
 # Dapper for PowerShell
 ![PowerShell](https://badgen.net/static/powershell/%3E%3D7.5/green) ![PSGallery](https://badgen.net/static/module/v0.1.0/blue) ![License](https://badgen.net/static/license/MIT/blue)
 
-[Dapper](https://www.learndapper.com) is a simple micro-ORM used to simplify working with ADO.NET.  
-If you like SQL but dislike the boilerplate of ADO.NET: [Dapper](https://www.learndapper.com) is for you!
+[Dapper](https://www.learndapper.com) is a simple micro-ORM used to simplify working with [ADO.NET](https://learn.microsoft.com/en-us/dotnet/framework/data/adonet).  
+If you like SQL but dislike the boilerplate of ADO.NET: Dapper is for you!
 
 ## Documentation
 - [User guide](https://github.com/cedx/dapper.ps1/wiki)

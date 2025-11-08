@@ -14,7 +14,7 @@ using namespace System.Data
 .OUTPUTS
 	[ordered] The hash table corresponding to the specified data record.
 #>
-function ConvertFrom-DataRecord {
+function ConvertFrom-Record {
 	[OutputType([object])]
 	param (
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
