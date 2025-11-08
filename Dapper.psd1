@@ -15,16 +15,14 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
-		"Invoke-Command"
 		"Get-Version"
+		"Invoke-Command"
 		"New-Connection"
 		"Select-Command"
 		"Select-First"
-		"Select-FirstOrDefault"
 		"Select-Reader"
 		"Select-Scalar"
 		"Select-Single"
-		"Select-SingleOrDefault"
 		"Set-TypeMap"
 	)
 
@@ -33,11 +31,9 @@
 		"src/New-Connection.psm1"
 		"src/Select-Command.psm1"
 		"src/Select-First.psm1"
-		"src/Select-FirstOrDefault.psm1"
 		"src/Select-Reader.psm1"
 		"src/Select-Scalar.psm1"
 		"src/Select-Single.psm1"
-		"src/Select-SingleOrDefault.psm1"
 		"src/Set-TypeMap.psm1"
 	)
 

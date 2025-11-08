@@ -3,7 +3,7 @@ using namespace System.Data
 
 <#
 .SYNOPSIS
-	TODO
+	Executes a parameterized SQL query and returns a sequence of objects whose properties correspond to the columns.
 .PARAMETER Connection
 	The connection to the data source.
 .PARAMETER Command
@@ -13,9 +13,9 @@ using namespace System.Data
 .PARAMETER AsArray
 	Value indicating whether to convert the resulting collection to an array.
 .OUTPUTS
-	[System.Collections.Generic.IEnumerable[object]] TODO
+	[System.Collections.Generic.IEnumerable[object]] The sequence of objects whose properties correspond to the returned columns.
 .OUTPUTS
-	[object[]] TODO
+	[object[]] The array of objects whose properties correspond to the returned columns.
 #>
 function Select-Command {
 	[CmdletBinding()]

@@ -11,7 +11,7 @@ using namespace System.Data
 .PARAMETER Parameters
 	The parameters of the SQL query.
 .OUTPUTS
-	The value of the first field returned.
+	The value of the first column returned.
 #>
 function Select-Scalar {
 	[CmdletBinding()]

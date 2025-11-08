@@ -3,7 +3,7 @@ using namespace System.Data
 
 <#
 .SYNOPSIS
-	TODO
+	Executes a parameterized SQL query.
 .PARAMETER Connection
 	The connection to the data source.
 .PARAMETER Command
