@@ -17,7 +17,7 @@ using namespace System.Data
 .OUTPUTS
 	[object[]] The array of objects whose properties correspond to the returned columns.
 #>
-function Select-Command {
+function Select-Object {
 	[CmdletBinding()]
 	[OutputType([object])]
 	param (
