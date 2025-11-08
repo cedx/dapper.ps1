@@ -2,11 +2,11 @@ using namespace Dapper
 
 <#
 .SYNOPSIS
-	TODO
+	Sets a custom mapping for a type deserializer.
 .PARAMETER Type
-	TODO
+	The entity type to override.
 .PARAMETER Map
-	TODO
+	The mapping rules implementation, or `$null` to remove the custom mapping.
 #>
 function Set-TypeMap {
 	[CmdletBinding()]
@@ -16,6 +16,7 @@ function Set-TypeMap {
 		[type] $Type,
 
 		[Parameter(Mandatory, Position = 1)]
+		[AllowNull()]
 		[ITypeMap] $Map
 	)
 
