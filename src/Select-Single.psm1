@@ -12,6 +12,7 @@ using namespace System.Data
 	The parameters of the SQL query.
 .OUTPUTS
 	The single row.
+	If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
 #>
 function Select-Single {
 	[CmdletBinding()]
@@ -31,5 +32,7 @@ function Select-Single {
 
 	$dynamicParameters = [DynamicParameters]::new()
 	foreach ($key in $Parameters.Keys) { $dynamicParameters.Add($key, $Parameters.$key) }
-	[SqlMapper]::QuerySingle($Connection, $Command, $dynamicParameters)
+
+	if ($ErrorActionPreference -eq "Stop") { [SqlMapper]::QuerySingle($Connection, $Command, $dynamicParameters) }
+	else { [SqlMapper]::QuerySingleOrDefault($Connection, $Command, $dynamicParameters) }
 }
