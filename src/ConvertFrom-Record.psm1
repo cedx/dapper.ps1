@@ -15,6 +15,7 @@ using namespace System.Data
 	[ordered] The hash table corresponding to the specified data record.
 #>
 function ConvertFrom-Record {
+	[CmdletBinding()]
 	[OutputType([object])]
 	param (
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]

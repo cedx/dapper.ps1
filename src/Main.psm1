@@ -8,7 +8,9 @@ using namespace System.Reflection
 	The file version of the Dapper assembly.
 #>
 function Get-Version {
+	[CmdletBinding()]
 	[OutputType([version])] param ()
+
 	$assembly = [Assembly]::GetAssembly([SqlMapper])
 	$fileVersion = [CustomAttributeExtensions]::GetCustomAttribute[AssemblyFileVersionAttribute]($assembly)
 	[version] $fileVersion.Version

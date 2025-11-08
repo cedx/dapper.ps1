@@ -17,8 +17,10 @@
 	FunctionsToExport = @(
 		"ConvertFrom-Reader"
 		"ConvertFrom-Record"
+		"Invoke-Command"
 		"Get-Version"
 		"New-Connection"
+		"Select-Command"
 		"Select-First"
 		"Select-FirstOrDefault"
 		"Select-Reader"
@@ -30,7 +32,9 @@
 	NestedModules = @(
 		"src/ConvertFrom-Reader.psm1"
 		"src/ConvertFrom-Record.psm1"
+		"src/Invoke-Command.psm1"
 		"src/New-Connection.psm1"
+		"src/Select-Command.psm1"
 		"src/Select-First.psm1"
 		"src/Select-FirstOrDefault.psm1"
 		"src/Select-Reader.psm1"

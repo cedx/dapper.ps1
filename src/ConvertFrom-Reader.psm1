@@ -17,6 +17,7 @@ using module ./ConvertFrom-Record.psm1
 	[ordered[]] The array of hash tables corresponding to the specified data reader.
 #>
 function ConvertFrom-Reader {
+	[CmdletBinding()]
 	[OutputType([object[]])]
 	param (
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
