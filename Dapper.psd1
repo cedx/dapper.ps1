@@ -7,7 +7,7 @@
 	Author = "Cédric Belin <cedx@outlook.com>"
 	CompanyName = "Cedric-Belin.fr"
 	Copyright = "© Cédric Belin"
-	Description = "A high performance Micro-ORM supporting MariaDB, MySQL, SQLite, SQL Server and more."
+	Description = "A high performance micro-ORM supporting MariaDB, MySQL, SQL Server, SQLite and more."
 	GUID = "73f259d4-477b-4162-8bc7-af02221cef9c"
 
 	AliasesToExport = @()
@@ -15,11 +15,13 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
-		# TODO
+		"ConvertFrom-DataReader"
+		"ConvertFrom-DataRecord"
 	)
 
 	NestedModules = @(
-		# TODO
+		"src/ConvertFrom-DataReader.psm1"
+		"src/ConvertFrom-DataRecord.psm1"
 	)
 
 	RequiredAssemblies = @(
@@ -31,7 +33,7 @@
 			LicenseUri = "https://github.com/cedx/dapper.ps1/blob/main/License.md"
 			ProjectUri = "https://github.com/cedx/dapper.ps1"
 			ReleaseNotes = "https://github.com/cedx/dapper.ps1/releases"
-			Tags = "ado.net", "client", "dapper", "orm", "sql"
+			Tags = "ado.net", "dapper", "orm", "sql"
 		}
 	}
 }
