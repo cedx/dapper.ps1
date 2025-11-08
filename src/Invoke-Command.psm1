@@ -1,3 +1,4 @@
+using namespace Dapper
 using namespace System.Data
 
 <#
@@ -17,11 +18,13 @@ function Invoke-Command {
 	[OutputType([int])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[IDbConnection] $Connection,
+		[ValidateScript({ $_ -is [IDbConnection] })]
+		[object] $Connection,
 
 		[Parameter(Mandatory, Position = 1)]
 		[string] $Command,
 
+		[Parameter(Position = 2)]
 		[ValidateNotNull()]
 		[hashtable] $Parameters = @{}
 	)
