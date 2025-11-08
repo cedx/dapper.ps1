@@ -17,6 +17,7 @@
 	FunctionsToExport = @(
 		"ConvertFrom-Reader"
 		"ConvertFrom-Record"
+		"Get-Version"
 	)
 
 	NestedModules = @(
