@@ -9,7 +9,8 @@ using namespace System.Reflection
 #>
 function Get-Version {
 	[CmdletBinding()]
-	[OutputType([version])] param ()
+	[OutputType([version])]
+	param ()
 
 	$assembly = [Assembly]::GetAssembly([SqlMapper])
 	$fileVersion = [CustomAttributeExtensions]::GetCustomAttribute[AssemblyFileVersionAttribute]($assembly)

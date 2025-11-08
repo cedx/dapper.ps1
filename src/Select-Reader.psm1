@@ -15,7 +15,7 @@ using namespace System.Data
 #>
 function Select-Reader {
 	[CmdletBinding()]
-	[OutputType([IDataReader])]
+	[OutputType([object])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[ValidateScript({ $_ -is [IDbConnection] })]
