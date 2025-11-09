@@ -11,12 +11,20 @@ using module ./Mapping/ConvertFrom-Dictionary.psm1
 	The SQL query to be executed.
 .PARAMETER Parameters
 	The parameters of the SQL query.
+.PARAMETER SplitOn
+	The field we should split and read the second object from.
+.PARAMETER Map
+	The function to map row types to the return type.
+.PARAMETER AsHashtable
+	Value indicating whether to convert the rows to a hash table.
 .OUTPUTS
-	The sequence of objects whose properties correspond to the returned columns.
+	[hashtable[]] The sequence of hash tables whose keys correspond to the returned columns.
+.OUTPUTS
+	[psobject[]] The sequence of custom objects whose properties correspond to the returned columns.
 #>
 function Invoke-Query {
 	[CmdletBinding(DefaultParameterSetName = "Default")]
-	[OutputType([psobject[]])]
+	[OutputType([hashtable[]], [psobject[]])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[IDbConnection] $Connection,
@@ -32,7 +40,10 @@ function Invoke-Query {
 		[string[]] $SplitOn = @("Id"),
 
 		[Parameter(Mandatory, ParameterSetName = "SplitOn")]
-		[scriptblock] $Map
+		[scriptblock] $Map,
+
+		[Parameter()]
+		[switch] $AsHashtable
 	)
 
 	$dynamicParameters = [DynamicParameters]::new()

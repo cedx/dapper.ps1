@@ -11,13 +11,16 @@ using module ./Mapping/ConvertFrom-Dictionary.psm1
 	The SQL query to be executed.
 .PARAMETER Parameters
 	The parameters of the SQL query.
+.PARAMETER AsHashtable
+	Value indicating whether to convert the row to a hash table.
 .OUTPUTS
-	The first row.
-	If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
+	[hashtable] The first row as a hash table. If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
+.OUTPUTS
+	[psobject] The first row as a custom object. If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
 #>
 function Get-First {
 	[CmdletBinding()]
-	[OutputType([psobject])]
+	[OutputType([hashtable], [psobject])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[IDbConnection] $Connection,
@@ -27,7 +30,10 @@ function Get-First {
 
 		[Parameter(Position = 2)]
 		[ValidateNotNull()]
-		[hashtable] $Parameters = @{}
+		[hashtable] $Parameters = @{},
+
+		[Parameter()]
+		[switch] $AsHashtable
 	)
 
 	$dynamicParameters = [DynamicParameters]::new()
