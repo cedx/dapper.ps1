@@ -17,7 +17,7 @@ using module ./Mapping/ConvertFrom-Record.psm1
 #>
 function Get-First {
 	[CmdletBinding()]
-	[OutputType([object])]
+	[OutputType([psobject])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[ValidateScript({ $_ -is [IDbConnection] })]
