@@ -1,3 +1,5 @@
+using namespace System.Diagnostics.CodeAnalysis
+
 <#
 .SYNOPSIS
 	Creates a new database connection.
@@ -15,6 +17,7 @@
 function New-Connection {
 	[CmdletBinding()]
 	[OutputType([object])]
+	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[object] $Type,
