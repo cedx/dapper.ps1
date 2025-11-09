@@ -14,7 +14,7 @@ using namespace System.Diagnostics.CodeAnalysis
 .OUTPUTS
 	The sequence of objects whose properties correspond to the returned columns.
 #>
-function Select-Object {
+function Invoke-Query {
 	[CmdletBinding()]
 	[OutputType([psobject[]])]
 	[SuppressMessage("PSAvoidOverwritingBuiltInCmdlets", "")]
