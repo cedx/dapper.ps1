@@ -18,8 +18,7 @@ function Invoke-MultipleQuery {
 	[OutputType([SqlMapper.GridReader])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[ValidateScript({ $_ -is [IDbConnection] })]
-		[object] $Connection,
+		[IDbConnection] $Connection,
 
 		[Parameter(Mandatory, Position = 1)]
 		[string] $Command,

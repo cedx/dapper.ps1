@@ -16,7 +16,7 @@ using namespace System.Diagnostics.CodeAnalysis
 #>
 function New-Connection {
 	[CmdletBinding()]
-	[OutputType([object])]
+	[OutputType([System.Data.IDbConnection])]
 	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]

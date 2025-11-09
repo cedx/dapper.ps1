@@ -13,8 +13,7 @@ function Close-Connection {
 	[OutputType([void])]
 	param (
 		[Parameter(Mandatory, Position = 0, ValueFromPipeline)]
-		[ValidateScript({ $_ -is [IDbConnection] })]
-		[object] $Connection
+		[IDbConnection] $Connection
 	)
 
 	process {

@@ -1,4 +1,5 @@
 using namespace Dapper
+using namespace System.Diagnostics.CodeAnalysis
 
 <#
 .SYNOPSIS
@@ -9,6 +10,7 @@ using namespace Dapper
 function Remove-TypeMap {
 	[CmdletBinding()]
 	[OutputType([void])]
+	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[object] $Type
