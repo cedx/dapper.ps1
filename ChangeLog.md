@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [0.4.0](https://github.com/cedx/dapper.ps1/compare/v0.3.0...v0.4.0)
+- Added the `Map` and `SplitOn` parameters to the `Invoke-Query` cmdlet.
+
 ## Version [0.3.0](https://github.com/cedx/dapper.ps1/compare/v0.2.0...v0.3.0)
 - Breaking change: renamed the `Invoke-Command` cmdlet to `Invoke-NonQuery`.
 - Breaking change: renamed the `Select-First` cmdlet to `Get-First`.
