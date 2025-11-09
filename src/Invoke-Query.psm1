@@ -1,5 +1,6 @@
 using namespace Dapper
 using namespace System.Data
+using module ./Mapping/ConvertFrom-Record.psm1
 
 <#
 .SYNOPSIS
@@ -31,11 +32,5 @@ function Invoke-Query {
 
 	$dynamicParameters = [DynamicParameters]::new()
 	foreach ($key in $Parameters.Keys) { $dynamicParameters.Add($key, $Parameters.$key) }
-
-	$records = [SqlMapper]::Query($Connection, $Command, $dynamicParameters)
-	foreach ($record in $records) {
-		$properties = @{}
-		foreach ($keyValue in $record) { $properties[$keyValue.Key] = $keyValue.Value }
-		[PSCustomObject] $properties
-	}
+	[SqlMapper]::Query($Connection, $Command, $dynamicParameters) | ConvertFrom-Record
 }

@@ -1,5 +1,6 @@
 using namespace Dapper
 using namespace System.Data
+using module ./Mapping/ConvertFrom-Record.psm1
 
 <#
 .SYNOPSIS
@@ -33,6 +34,7 @@ function Get-First {
 	$dynamicParameters = [DynamicParameters]::new()
 	foreach ($key in $Parameters.Keys) { $dynamicParameters.Add($key, $Parameters.$key) }
 
-	if ($ErrorActionPreference -eq "Stop") { [SqlMapper]::QueryFirst($Connection, $Command, $dynamicParameters) }
-	else { [SqlMapper]::QueryFirstOrDefault($Connection, $Command, $dynamicParameters) }
+	if ($ErrorActionPreference -eq "Stop") { $record = [SqlMapper]::QueryFirst($Connection, $Command, $dynamicParameters) }
+	else { $record = [SqlMapper]::QueryFirstOrDefault($Connection, $Command, $dynamicParameters) }
+	$record ? (ConvertFrom-Record $record) : $null
 }
