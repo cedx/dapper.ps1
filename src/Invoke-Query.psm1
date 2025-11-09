@@ -51,5 +51,5 @@ function Invoke-Query {
 
 	if ($PSCmdlet.ParameterSetName -eq "SplitOn") { $records = [SqlMapper]::Query($Connection, $Command, $Map, $dynamicParameters, $null, $true, $SplitOn -join ", ") }
 	else { $records = [SqlMapper]::Query($Connection, $Command, $dynamicParameters) }
-	$records.ForEach{ ConvertFrom-Dictionary $_ -AsHashtable:$AsHashtable }
+	$records | ConvertFrom-Dictionary -AsHashtable:$AsHashtable
 }
