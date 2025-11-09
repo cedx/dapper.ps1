@@ -16,5 +16,5 @@ function Remove-TypeMap {
 		[object] $Type
 	)
 
-	[SqlMapper]::SetTypeMap($Type -is [type] ? $Type : [type]::GetType($Type), $null)
+	[SqlMapper]::RemoveTypeMap($Type -is [type] ? $Type : [type]::GetType($Type))
 }
