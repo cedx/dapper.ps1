@@ -13,7 +13,7 @@ using namespace System.Data
 .OUTPUTS
 	The value of the first column returned.
 #>
-function Select-Scalar {
+function Get-Scalar {
 	[CmdletBinding()]
 	[OutputType([object])]
 	param (

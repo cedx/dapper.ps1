@@ -14,7 +14,7 @@ using namespace System.Data
 	The single row.
 	If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
 #>
-function Select-Single {
+function Get-Single {
 	[CmdletBinding()]
 	[OutputType([object])]
 	param (

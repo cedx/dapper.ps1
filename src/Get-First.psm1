@@ -14,7 +14,7 @@ using namespace System.Data
 	The first row.
 	If not found: throws an error if `-ErrorAction` is set to `Stop`, otherwise returns `$null`.
 #>
-function Select-First {
+function Get-First {
 	[CmdletBinding()]
 	[OutputType([object])]
 	param (
