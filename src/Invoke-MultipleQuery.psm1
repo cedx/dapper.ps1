@@ -13,7 +13,7 @@ using namespace System.Data
 .OUTPUTS
 	A grid reader that can be used to iterate over the result sets of the SQL query.
 #>
-function Select-Multiple {
+function Invoke-MultipleQuery {
 	[CmdletBinding()]
 	[OutputType([SqlMapper.GridReader])]
 	param (

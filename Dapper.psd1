@@ -20,10 +20,10 @@
 		"Get-Scalar"
 		"Get-Single"
 		"Get-Version"
+		"Invoke-MultipleQuery"
 		"Invoke-NonQuery"
 		"Invoke-Query"
 		"New-Connection"
-		"Select-Multiple"
 		"Select-Reader"
 		"Set-TypeMap"
 	)
@@ -33,10 +33,10 @@
 		"src/Get-First.psm1"
 		"src/Get-Scalar.psm1"
 		"src/Get-Single.psm1"
+		"src/Invoke-MultipleQuery.psm1"
 		"src/Invoke-NonQuery.psm1"
 		"src/Invoke-Query.psm1"
 		"src/New-Connection.psm1"
-		"src/Select-Multiple.psm1"
 		"src/Select-Reader.psm1"
 		"src/Set-TypeMap.psm1"
 	)
