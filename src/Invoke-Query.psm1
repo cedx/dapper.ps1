@@ -15,7 +15,7 @@ using module ./Mapping/ConvertFrom-Record.psm1
 	The sequence of objects whose properties correspond to the returned columns.
 #>
 function Invoke-Query {
-	[CmdletBinding()]
+	[CmdletBinding(DefaultParameterSetName = "Default")]
 	[OutputType([psobject[]])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
@@ -26,10 +26,19 @@ function Invoke-Query {
 
 		[Parameter(Position = 2)]
 		[ValidateNotNull()]
-		[hashtable] $Parameters = @{}
+		[hashtable] $Parameters = @{},
+
+		[Parameter(ParameterSetName = "SplitOn")]
+		[string[]] $SplitOn = @("Id"),
+
+		[Parameter(Mandatory, ParameterSetName = "SplitOn")]
+		[scriptblock] $Map
 	)
 
 	$dynamicParameters = [DynamicParameters]::new()
 	foreach ($key in $Parameters.Keys) { $dynamicParameters.Add($key, $Parameters.$key) }
-	[SqlMapper]::Query($Connection, $Command, $dynamicParameters) | ConvertFrom-Record
+
+	if ($PSCmdlet.ParameterSetName -eq "SplitOn") { $records = [SqlMapper]::Query($Connection, $Command, $Map, $dynamicParameters, $null, $true, $SplitOn -join ", ") }
+	else { $records = [SqlMapper]::Query($Connection, $Command, $dynamicParameters) }
+	$records | ConvertFrom-Record
 }
