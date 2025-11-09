@@ -13,7 +13,7 @@ using namespace System.Data
 .OUTPUTS
 	A data reader that can be used to iterate over the results of the SQL query.
 #>
-function Select-Reader {
+function Invoke-Reader {
 	[CmdletBinding()]
 	[OutputType([object])]
 	param (

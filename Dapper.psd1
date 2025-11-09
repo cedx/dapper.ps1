@@ -24,7 +24,7 @@
 		"Invoke-NonQuery"
 		"Invoke-Query"
 		"New-Connection"
-		"Select-Reader"
+		"Invoke-Reader"
 		"Set-TypeMap"
 	)
 
@@ -37,7 +37,7 @@
 		"src/Invoke-NonQuery.psm1"
 		"src/Invoke-Query.psm1"
 		"src/New-Connection.psm1"
-		"src/Select-Reader.psm1"
+		"src/Invoke-Reader.psm1"
 		"src/Set-TypeMap.psm1"
 	)
 
