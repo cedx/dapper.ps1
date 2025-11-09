@@ -4,17 +4,17 @@ using namespace System.Diagnostics.CodeAnalysis
 
 <#
 .SYNOPSIS
-	Executes a parameterized SQL query.
+	Executes a parameterized SQL statement.
 .PARAMETER Connection
 	The connection to the data source.
 .PARAMETER Command
-	The SQL query to be executed.
+	The SQL statement to be executed.
 .PARAMETER Parameters
-	The parameters of the SQL query.
+	The parameters of the SQL statement.
 .OUTPUTS
 	The number of rows affected.
 #>
-function Invoke-Command {
+function Invoke-NonQuery {
 	[CmdletBinding()]
 	[OutputType([int])]
 	[SuppressMessage("PSAvoidOverwritingBuiltInCmdlets", "")]
