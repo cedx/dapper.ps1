@@ -11,7 +11,7 @@ using namespace System.Data
 .PARAMETER Parameters
 	The parameters of the SQL query.
 .OUTPUTS
-	The grid reader providing access to the result sets.
+	A grid reader that can be used to iterate over the result sets of the SQL query.
 #>
 function Select-Multiple {
 	[CmdletBinding()]
