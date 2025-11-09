@@ -15,7 +15,7 @@ using namespace System.Data
 #>
 function Invoke-Reader {
 	[CmdletBinding()]
-	[OutputType([IDataReader])]
+	[OutputType([System.Data.IDataReader])]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[IDbConnection] $Connection,
