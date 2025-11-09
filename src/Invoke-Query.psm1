@@ -1,6 +1,6 @@
 using namespace Dapper
 using namespace System.Data
-using module ./Mapping/ConvertFrom-Record.psm1
+using module ./Mapping/ConvertFrom-Dictionary.psm1
 
 <#
 .SYNOPSIS
@@ -40,5 +40,5 @@ function Invoke-Query {
 
 	if ($PSCmdlet.ParameterSetName -eq "SplitOn") { $records = [SqlMapper]::Query($Connection, $Command, $Map, $dynamicParameters, $null, $true, $SplitOn -join ", ") }
 	else { $records = [SqlMapper]::Query($Connection, $Command, $dynamicParameters) }
-	$records | ConvertFrom-Record
+	$records.ForEach{ ConvertFrom-Dictionary $_ -AsHashtable:$AsHashtable }
 }

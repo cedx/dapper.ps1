@@ -1,6 +1,6 @@
 using namespace Dapper
 using namespace System.Data
-using module ./Mapping/ConvertFrom-Record.psm1
+using module ./Mapping/ConvertFrom-Dictionary.psm1
 
 <#
 .SYNOPSIS
@@ -35,5 +35,5 @@ function Get-Single {
 
 	if ($ErrorActionPreference -eq "Stop") { $record = [SqlMapper]::QuerySingle($Connection, $Command, $dynamicParameters) }
 	else { $record = [SqlMapper]::QuerySingleOrDefault($Connection, $Command, $dynamicParameters) }
-	$record ? (ConvertFrom-Record $record) : $null
+	$record ? (ConvertFrom-Dictionary $record -AsHashtable:$AsHashtable) : $null
 }
