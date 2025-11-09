@@ -1,6 +1,6 @@
 using namespace Dapper
 using namespace System.Data
-using module ./Mapping/ConvertFrom-Dictionary.psm1
+using module ./ConvertFrom-Dictionary.psm1
 
 <#
 .SYNOPSIS
