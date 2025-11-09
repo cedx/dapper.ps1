@@ -20,7 +20,7 @@ function New-Connection {
 	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[object] $Type,
+		[type] $Type,
 
 		[Parameter(Mandatory, Position = 1, ValueFromPipeline)]
 		[string] $ConnectionString,
@@ -30,7 +30,7 @@ function New-Connection {
 	)
 
 	process {
-		$connection = New-Object ($Type -is [type] ? $Type.FullName : $Type) $ConnectionString
+		$connection = New-Object $Type $ConnectionString
 		if ($Open) { $connection.Open() }
 		$connection
 	}

@@ -13,8 +13,8 @@ function Remove-TypeMap {
 	[SuppressMessage("PSUseShouldProcessForStateChangingFunctions", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
-		[object] $Type
+		[type] $Type
 	)
 
-	[SqlMapper]::RemoveTypeMap($Type -is [type] ? $Type : [type]::GetType($Type))
+	[SqlMapper]::RemoveTypeMap($Type)
 }
