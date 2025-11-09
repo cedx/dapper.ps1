@@ -26,6 +26,7 @@
 		"Invoke-Query"
 		"Invoke-Reader"
 		"New-Connection"
+		"Remove-TypeMap"
 	)
 
 	NestedModules = @(
@@ -39,6 +40,7 @@
 		"src/Invoke-Query.psm1"
 		"src/Invoke-Reader.psm1"
 		"src/New-Connection.psm1"
+		"src/Remove-TypeMap.psm1"
 	)
 
 	RequiredAssemblies = @(
