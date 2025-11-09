@@ -1,6 +1,6 @@
 ﻿@{
 	DefaultCommandPrefix = "Dapper"
-	ModuleVersion = "0.3.0"
+	ModuleVersion = "0.4.0"
 	PowerShellVersion = "7.4"
 	RootModule = "src/Main.psm1"
 
