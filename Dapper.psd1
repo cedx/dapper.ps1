@@ -15,6 +15,7 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
+		"Close-Connection"
 		"Get-First"
 		"Get-Scalar"
 		"Get-Single"
@@ -28,6 +29,7 @@
 	)
 
 	NestedModules = @(
+		"src/Close-Connection.psm1"
 		"src/Get-First.psm1"
 		"src/Get-Scalar.psm1"
 		"src/Get-Single.psm1"

@@ -4,6 +4,7 @@
 - Breaking change: renamed the `Select-First` cmdlet to `Get-First`.
 - Breaking change: renamed the `Select-Scalar` cmdlet to `Get-Scalar`.
 - Breaking change: renamed the `Select-Single` cmdlet to `Get-Single`.
+- Added the `Close-Connection` cmdlet.
 - Fixed the type of the objects returned from the `Select-Object` cmdlet.
 
 ## Version [0.2.0](https://github.com/cedx/dapper.ps1/compare/v0.1.0...v0.2.0)
