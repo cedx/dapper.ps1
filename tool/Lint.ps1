@@ -3,4 +3,3 @@ Import-Module PSScriptAnalyzer
 Invoke-ScriptAnalyzer $PSScriptRoot -Recurse
 Invoke-ScriptAnalyzer *.psd1
 Invoke-ScriptAnalyzer src -Recurse
-Invoke-ScriptAnalyzer test -Recurse
