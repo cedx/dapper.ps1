@@ -1,11 +1,16 @@
 # Changelog
 
 ## Version [0.3.0](https://github.com/cedx/dapper.ps1/compare/v0.2.0...v0.3.0)
+- Breaking change: renamed the `Invoke-Command` cmdlet to `Invoke-NonQuery`.
 - Breaking change: renamed the `Select-First` cmdlet to `Get-First`.
+- Breaking change: renamed the `Select-Multiple` cmdlet to `Invoke-MultipleQuery`.
+- Breaking change: renamed the `Select-Object` cmdlet to `Invoke-Query`.
+- Breaking change: renamed the `Select-Reader` cmdlet to `Invoke-Reader`.
 - Breaking change: renamed the `Select-Scalar` cmdlet to `Get-Scalar`.
 - Breaking change: renamed the `Select-Single` cmdlet to `Get-Single`.
-- Added the `Close-Connection` cmdlet.
-- Fixed the type of the objects returned from the `Select-Object` cmdlet.
+- Breaking change: renamed the `Set-TypeMap` cmdlet to `Add-TypeMap`.
+- Added the `Close-Connection` and `Remove-TypeMap` cmdlets.
+- Fixed the type of the objects returned from the query cmdlets.
 
 ## Version [0.2.0](https://github.com/cedx/dapper.ps1/compare/v0.1.0...v0.2.0)
 - Breaking change: removed the `ConvertFrom-Reader` and `ConvertFrom-Record` functions.
