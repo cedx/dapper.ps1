@@ -15,6 +15,7 @@
 	VariablesToExport = @()
 
 	FunctionsToExport = @(
+		"Add-TypeMap"
 		"Close-Connection"
 		"Get-First"
 		"Get-Scalar"
@@ -23,12 +24,12 @@
 		"Invoke-MultipleQuery"
 		"Invoke-NonQuery"
 		"Invoke-Query"
-		"New-Connection"
 		"Invoke-Reader"
-		"Set-TypeMap"
+		"New-Connection"
 	)
 
 	NestedModules = @(
+		"src/Add-TypeMap.psm1"
 		"src/Close-Connection.psm1"
 		"src/Get-First.psm1"
 		"src/Get-Scalar.psm1"
@@ -36,9 +37,8 @@
 		"src/Invoke-MultipleQuery.psm1"
 		"src/Invoke-NonQuery.psm1"
 		"src/Invoke-Query.psm1"
-		"src/New-Connection.psm1"
 		"src/Invoke-Reader.psm1"
-		"src/Set-TypeMap.psm1"
+		"src/New-Connection.psm1"
 	)
 
 	RequiredAssemblies = @(

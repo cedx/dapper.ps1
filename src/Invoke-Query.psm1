@@ -1,6 +1,5 @@
 using namespace Dapper
 using namespace System.Data
-using namespace System.Diagnostics.CodeAnalysis
 
 <#
 .SYNOPSIS
@@ -17,7 +16,6 @@ using namespace System.Diagnostics.CodeAnalysis
 function Invoke-Query {
 	[CmdletBinding()]
 	[OutputType([psobject[]])]
-	[SuppressMessage("PSAvoidOverwritingBuiltInCmdlets", "")]
 	param (
 		[Parameter(Mandatory, Position = 0)]
 		[ValidateScript({ $_ -is [IDbConnection] })]
